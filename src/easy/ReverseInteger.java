@@ -1,10 +1,11 @@
 package easy;
 
 /**
+ * @author someone
  * @Classname ReverseInteger
  * @Description This Class is for
  * @Date 2020/5/27 15:21
- * @Created by LWD
+ * @Created by someone
  * @Version 1.0
  */
 public class ReverseInteger {
