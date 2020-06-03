@@ -1,4 +1,4 @@
-package easy;
+package easy.tree;
 
 /**
  * @Author someone
@@ -54,15 +54,4 @@ public class SameTree {
     }
 
 }
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
 
