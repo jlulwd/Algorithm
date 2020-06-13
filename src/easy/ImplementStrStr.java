@@ -16,10 +16,12 @@ public class ImplementStrStr {
        if(l1<l2) {
            return -1;
        }
+       //i可以理解成第一个字符串的指针
         for (int i = 0; ; i++) {
             if (i+l2>l1) {
                 return -1;
             }
+            //j理解成第二个字符串指针
             for (int j = 0; ;j++) {
                 if(j==l2) {
                     return i;

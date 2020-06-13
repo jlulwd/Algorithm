@@ -1,7 +1,5 @@
 package easy;
 
-import sun.awt.X11.XSystemTrayPeer;
-
 import java.util.Scanner;
 
 /**

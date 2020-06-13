@@ -1,7 +1,5 @@
 package easy;
 
-import com.sun.deploy.panel.JreTableModel;
-
 /**
  * @Author someone
  * @Classname RemoveElement
