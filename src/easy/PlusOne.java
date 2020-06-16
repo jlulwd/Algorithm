@@ -12,12 +12,12 @@ public class PlusOne {
     public static int [] plusOne(int [] digits) {
         int p = digits.length-1;
         if(digits[p]<9) {
-            digits[p]=++digits[p];
+            ++digits[p];
         } else {
             do {
                 digits[p--] = 0;
             } while (p >= 0 && digits[p] == 9);
-            if (digits[0] != 0) {
+            if (digits[0] != 9) {
                 ++digits[p];
             } else {
                 digits = new int[digits.length + 1];
@@ -27,7 +27,7 @@ public class PlusOne {
         return digits;
     }
     public static void main(String[] args) {
-        int[] nums={0,9,9};
+        int[] nums={1,9,9};
         int[] newNums=plusOne(nums);
         for (int i:newNums) {
             System.out.println(i);

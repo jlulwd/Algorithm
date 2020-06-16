@@ -33,6 +33,7 @@ public class MaximumSubarray {
         int mid=(left+right)>>1;
         int leftAnswer=helper(nums,left,mid);
         int rightAnswer=helper(nums,mid+1,right);
+        //leftMax和rightMax是暂时给的
         int leftMax=nums[mid], rightMax=nums[mid+1];
         int temp=0;
         for(int i=mid;i>=left;--i){
@@ -53,7 +54,7 @@ public class MaximumSubarray {
 
     public static void main(String[] args) {
         int init=-5;
-        int n=100000;
+        int n=10;
         int[] nums=new int[n];
         Random rand=new Random();
         for (int i = 0; i < n; i++) {

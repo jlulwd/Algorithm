@@ -30,10 +30,29 @@ public class LongestCommonPrefix {
         return strs[0].substring(0, minLen);
     }
 
+    public static String longestCommonPrefix2(String[] strs) {
+        int len = strs.length;
+        if (len == 0) {
+            return "";
+        }
+        int minLen = Integer.MAX_VALUE;
+        for (String str : strs) {
+            minLen = Math.min(str.length(), minLen);
+        }
+        for (int i = 1; i < len; i++) {
+            for (int j = 0; j < minLen; j++) {
+                if (strs[0].charAt(j) != strs[i].charAt(j)) {
+                    return strs[0].substring(0, j);
+                }
+            }
+        }
+        return strs[0].substring(0, minLen);
+    }
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String line = in.nextLine();
-        String [] strs=line.split(" ");
-        System.out.println(longestCommonPrefix(strs));
+        String[] strs = line.split(" ");
+        System.out.println(longestCommonPrefix2(strs));
     }
 }
