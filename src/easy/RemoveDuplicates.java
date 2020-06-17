@@ -24,7 +24,17 @@ public class RemoveDuplicates {
     }
 
     public static void main(String[] args) {
-        int [] arr={1,1,2,5,8,8};
-        System.out.println(removeDeplicates(arr));
+        int [] arr={1,1,2,5,8,8,8,9,9,9};
+        System.out.println(removeDeplicatesII(arr,1));
+    }
+
+    public static int removeDeplicatesII(int [] nums, int k) {
+        int i = 0;
+        for(int n:nums){
+            if(i<k||n>nums[i-k]) {
+                nums[i++]=n;
+            }
+        }
+        return i;
     }
 }
