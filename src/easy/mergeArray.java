@@ -8,7 +8,7 @@ package easy;
  * @Created by someone
  * @Version 1.0
  */
-public class merrgeArray {
+public class mergeArray {
     public static void merge(int[]nums1, int m,int[] nums2,int n)    {
         int p=m--+n---1;
         while(m>=0&&n>=0) {

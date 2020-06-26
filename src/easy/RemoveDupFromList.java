@@ -42,11 +42,25 @@ public class RemoveDupFromList {
         node4.next=node5;
         ListNode head1=node1;
         printListNode(head1);
-        ListNode head2=deleteDuplicates(head1);
+        //ListNode head2=deleteDuplicates(head1);
+        ListNode head2=removeDuplicateNodes(head1);
         System.out.println("清理后:");
         printListNode(head2);
 
     }
+    public static ListNode removeDuplicateNodes(ListNode head) {
+        int[] bits = new int[20000 / 32 + 1];
+        ListNode cur = head;
+        while (cur != null && cur.next != null) {
+            bits[cur.val / 32] |= 1 << (cur.val % 32);
+            if ((bits[cur.next.val / 32] & (1 << (cur.next.val % 32))) != 0)
+                cur.next = cur.next.next;
+            else
+                cur = cur.next;
+        }
+        return head;
+    }
+
 }
 
 class ListNode {
